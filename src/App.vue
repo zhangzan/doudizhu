@@ -1,28 +1,34 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+<template lang="jade">
+  #app
+    poker
 </template>
 
 <script>
-import Hello from './components/Hello'
+import poker from './components/poker'
+import Rule from './utils/rules'
 
+window.Rule = Rule
 export default {
   name: 'app',
-  components: {
-    Hello
+  components: { poker },
+  methods: {
+    test () {
+      // const pokers = [{ value: 1 }]
+    }
+  },
+  created () {
+    this.test()
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+@import base
+
+body
+  background url('~assets/bg.png')
+  background-size cover
+  height 100%
+#app
+  text-align center
 </style>

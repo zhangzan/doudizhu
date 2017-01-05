@@ -41,7 +41,7 @@ exports.cssLoaders = function (options) {
     less: generateLoaders(['css', 'less']),
     sass: generateLoaders(['css', 'sass?indentedSyntax']),
     scss: generateLoaders(['css', 'sass']),
-    stylus: generateLoaders(['css', 'stylus']),
+    stylus: generateLoaders(['css', 'stylus?paths=' + path.resolve(__dirname, '../src/stylus')]),
     styl: generateLoaders(['css', 'stylus'])
   }
 }
